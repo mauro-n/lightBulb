@@ -1,28 +1,22 @@
-class Lampada {
-    constructor(domEl, ambiente) {
-        this.lampada = domEl
-        this.ambiente = ambiente
-        this.isOn = false
-        this.lampada.addEventListener("click", this.alternar.bind(this))
-    }
+window.onload = () => {
+    const ambiente = document.querySelector("body")
+    const lampada = document.querySelector("#lampada")
 
-    alternar() {
-        this.isOn = !this.isOn
-        if (this.isOn) {
-            this.lampada.src = "./bulb2.png"
-            this.ambiente.classList.remove("dark")
-            this.ambiente.classList.add("bright")
+    let estaLigado = false;
+
+    function ligaDesliga() {
+        estaLigado = !estaLigado
+
+        if (estaLigado) {
+            lampada.src = "./bulb2.png"            
+            ambiente.classList.remove("apagado")
         } else {
-            this.lampada.src = "./bulb1.png"
-            this.ambiente.classList.remove("bright")
-            this.ambiente.classList.add("dark")
+            lampada.src = "./bulb1.png"
+            ambiente.classList.add("apagado")
         }
-        return
     }
+    
+    lampada.addEventListener("click", ligaDesliga)
 }
 
-window.onload = (() => {
-    const lampadaEl = document.querySelector("#lampada");
-    const ambiente = document.querySelector("body")
-    const lampada = new Lampada(lampadaEl, ambiente)
-})
+
