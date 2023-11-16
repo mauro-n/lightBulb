@@ -1,6 +1,7 @@
 .img {
     width: 100%;    
     max-width: 500px;
+    user-select: none;
 }
 
 .img:hover {
@@ -26,6 +27,8 @@ body {
 
 @media(max-width: 400px) {
     .wrapper {
-        margin-top: 15vh;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
     }
 }

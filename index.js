@@ -17,7 +17,6 @@ class Lampada {
             this.ambiente.classList.remove("bright")
             this.ambiente.classList.add("dark")
         }
-
         return
     }
 }
