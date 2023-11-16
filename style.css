@@ -1,0 +1,31 @@
+.img {
+    width: 100%;    
+    max-width: 500px;
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    transition: all 50ms ease;
+}
+
+.bright {
+    background-color: white;
+}
+
+.dark {
+    background-color: #3f49cc;
+}
+
+@media(max-width: 400px) {
+    .wrapper {
+        margin-top: 15vh;
+    }
+}
